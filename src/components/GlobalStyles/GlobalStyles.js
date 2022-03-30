@@ -58,12 +58,14 @@ const GlobalStyles = createGlobalStyle`
     --color-accent-400: ${COLORS.accent[400]};
     --color-accent-500: ${COLORS.accent[500]};
     --color-accent-600: ${COLORS.accent[600]};
+    --color-error-400: ${COLORS.error[400]};
     --font-weight-normal: ${WEIGHTS.normal};
     --font-weight-medium: ${WEIGHTS.medium};
     --font-weight-bold: ${WEIGHTS.bold};
     --font-family-serif: ${FAMILIES.serif};
     --font-family-sans-serif: ${FAMILIES.sansSerif};
     font-family: var(--font-family-sans-serif);
+    font-weight: var(--font-weight-normal);
     scrollbar-width: thin;
     scrollbar-color:
       var(--color-copy-300)

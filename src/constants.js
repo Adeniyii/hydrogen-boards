@@ -25,6 +25,9 @@ export const COLORS = {
     500: "hsla(50, 86%, 58%, 1)",
     600: "hsla(50, 93%, 48%, 1)",
   },
+  error: {
+    400: "hsla(0, 84%, 77%, 1)",
+  },
 };
 
 export const WEIGHTS = {
