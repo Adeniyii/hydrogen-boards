@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { COLORS } from "../../constants";
 
 const SIZES = {
   small: {
@@ -7,15 +8,37 @@ const SIZES = {
     "--fontSize": 12 / 16 + "rem",
     "--padding": "4px 16px",
   },
+  medium: {
+    "--borderRadius": 4 + "px",
+    "--fontSize": 14 / 16 + "rem",
+    "--padding": "19px 24px",
+  },
+
   large: {
     "--borderRadius": 4 + "px",
     "--fontSize": 14 / 16 + "rem",
-    "--padding": "10px 24px",
+    "--padding": "18px 70px",
   },
 };
 
-const Button = ({ variant, size, children }) => {
-  const styles = SIZES[size];
+const COLOR = {
+  primary: {
+    "--background-color": COLORS.primary[600],
+    "--hover-color": COLORS.primary[500],
+    "--hover-color-outline": COLORS.primary[200],
+    "--font-color": COLORS.primary[100],
+  },
+
+  accent: {
+    "--background-color": COLORS.accent[600],
+    "--hover-color": COLORS.accent[500],
+    "--hover-color-outline": COLORS.accent[200],
+    "--font-color": COLORS.accent[100],
+  },
+};
+
+const Button = ({ variant, size, children, type = "primary" }) => {
+  const styles = { ...SIZES[size], ...COLOR[type] };
 
   let Component;
   if (variant === "fill") {
@@ -33,6 +56,7 @@ const ButtonBase = styled.button`
   font-size: var(--fontSize);
   padding: var(--padding);
   border-radius: var(--borderRadius);
+  line-height: 1.2;
 
   &:focus {
     outline-color: var(--color-primary-500);
@@ -41,21 +65,21 @@ const ButtonBase = styled.button`
 `;
 
 const FillButton = styled(ButtonBase)`
-  background-color: var(--color-primary-600);
-  color: var(--color-primary-100);
+  background-color: var(--background-color);
+  color: var(--font-color);
 
   &:hover {
-    background-color: var(--color-primary-500);
+    background-color: var(--hover-color);
   }
 `;
 
 const OutlineButton = styled(ButtonBase)`
-  background-color: var(--color-primary-100);
-  color: var(--color-primary-600);
+  background-color: var(--font-color);
+  color: var(--background-color);
   border: 2px solid var(--color-copy-200);
 
   &:hover {
-    background-color: var(--color-primary-200);
+    background-color: var(--hover-color-outline);
   }
 `;
 

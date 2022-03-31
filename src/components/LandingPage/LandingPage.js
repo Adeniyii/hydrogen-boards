@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HeroSection from "../HeroSection";
+import LandingBody from "../LandingBody/LandingBody";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import PopularJobs from "../PopularJobs";
 
@@ -11,6 +12,7 @@ const LandingPage = () => {
         <HeroSection />
         <PopularJobs />
       </MaxWidthClone>
+      <LandingBody />
     </PageWrapper>
   );
 };

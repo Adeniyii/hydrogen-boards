@@ -28,9 +28,13 @@ const PopularJobs = () => {
       <PopularJobsHeading>Popular Job Categories</PopularJobsHeading>
       <PopularJobsRow>
         <JobsGrid>
-          {JobsData.map((jobs) => {
+          {JobsData.map((job) => {
             return (
-              <PopularJobsCard title={jobs.title} jobCount={jobs.jobCount} />
+              <PopularJobsCard
+                key={job.title}
+                title={job.title}
+                jobCount={job.jobCount}
+              />
             );
           })}
         </JobsGrid>

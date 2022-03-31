@@ -59,6 +59,10 @@ const HeroHeading = styled.h1`
   color: var(--color-copy-600);
   text-transform: capitalize;
   line-height: 72px;
+
+  & > span {
+    color: var(--color-primary-600);
+  }
 `;
 
 const HeroParagraph = styled.p`

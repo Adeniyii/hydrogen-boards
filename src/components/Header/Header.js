@@ -17,10 +17,10 @@ const Header = () => {
           <Link href="#">Career Tips</Link>
         </Nav>
         <ActionRow>
-          <Button size="large" variant="outline">
+          <Button size="medium" variant="outline">
             Login
           </Button>
-          <Button size="large" variant="fill">
+          <Button size="medium" variant="fill">
             Get Started
           </Button>
         </ActionRow>
@@ -61,6 +61,7 @@ const ActionRow = styled.div`
   display: flex;
   gap: 16px;
   margin-left: auto;
+  align-items: center;
 `;
 
 const Link = styled.a`

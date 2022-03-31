@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
   }
   * {
     margin: 0;
@@ -31,6 +31,9 @@ const GlobalStyles = createGlobalStyle`
   }
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+  }
+  h1 {
+    line-height: 1.2;
   }
   #root, #__next {
     isolation: isolate;
@@ -64,6 +67,17 @@ const GlobalStyles = createGlobalStyle`
     --font-weight-bold: ${WEIGHTS.bold};
     --font-family-serif: ${FAMILIES.serif};
     --font-family-sans-serif: ${FAMILIES.sansSerif};
+    --shadow-color: 249deg 15% 53%;
+    --shadow-elevation-low:
+      0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
+      2.2px 2.3px 4.8px hsl(var(--shadow-color) / 0.53);
+    --shadow-elevation-medium:
+      0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
+      11.2px 11.5px 24.1px hsl(var(--shadow-color) / 0.74);
+    --shadow-elevation-high:
+      0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
+      10.1px 18.6px 38.9px hsl(var(--shadow-color) / 0.25),
+      30.8px 58.3px 122.1px hsl(var(--shadow-color) / 0.5);
     font-family: var(--font-family-sans-serif);
     font-weight: var(--font-weight-normal);
     scrollbar-width: thin;
@@ -86,6 +100,7 @@ const GlobalStyles = createGlobalStyle`
     text-align: left;
     font: inherit;
     color: inherit;
+    box-sizing: border-box;
   }
   a {
     color: inherit;
