@@ -35,9 +35,16 @@ const COLOR = {
     "--hover-color-outline": COLORS.accent[200],
     "--font-color": COLORS.accent[100],
   },
+
+  plain: {
+    "--background-color": COLORS.white,
+    "--hover-color": COLORS.primary[100],
+    "--hover-color-outline": COLORS.primary[100],
+    "--font-color": COLORS.primary[600],
+  },
 };
 
-const Button = ({ variant, size, children, type = "primary" }) => {
+const Button = ({ variant, size, children, type = "primary", delegated }) => {
   const styles = { ...SIZES[size], ...COLOR[type] };
 
   let Component;
@@ -49,7 +56,11 @@ const Button = ({ variant, size, children, type = "primary" }) => {
     throw new Error(`Unrecognized Button variant: ${variant}`);
   }
 
-  return <Component style={styles}>{children}</Component>;
+  return (
+    <Component style={styles} {...delegated}>
+      {children}
+    </Component>
+  );
 };
 
 const ButtonBase = styled.button`

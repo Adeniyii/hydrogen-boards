@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import CTALanding from "../CTALanding/CTALanding";
 import HeroSection from "../HeroSection";
 import LandingBody from "../LandingBody/LandingBody";
 import MaxWidthWrapper from "../MaxWidthWrapper";
@@ -13,6 +14,9 @@ const LandingPage = () => {
         <PopularJobs />
       </MaxWidthClone>
       <LandingBody />
+      <MaxWidthWrapper>
+        <CTALanding />
+      </MaxWidthWrapper>
     </PageWrapper>
   );
 };

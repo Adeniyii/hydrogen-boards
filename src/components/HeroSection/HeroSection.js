@@ -21,6 +21,18 @@ const HeroSection = () => {
             <HeroImage alt="" src="/images/Victory.avif" />
           </HeroImageWrapper>
         </DecorativeBox>
+        <JobCard>
+          <JobIconWrapper></JobIconWrapper>
+          <JobTitle>
+            <h3>Senior UX Designer</h3>
+            <span>Apply</span>
+          </JobTitle>
+          <JobAddress>
+            <span>Facebook</span>
+            <span></span>
+            <span>San Fracisco, USA</span>
+          </JobAddress>
+        </JobCard>
         <HeroHiringBlock>
           <HirirngInfoWrapper>
             <GraphHeading>34k</GraphHeading>
@@ -87,7 +99,7 @@ const HeroHiringBlock = styled.div`
   bottom: 0;
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   transform: translateX(90px);
   position: absolute;
   padding: 24px 32px;
@@ -130,6 +142,57 @@ const DecorativeBox = styled.div`
     rgba(131, 119, 194, 0.08) 100%
   );
   position: relative;
+`;
+
+const JobCard = styled.div`
+  display: grid;
+  padding: 12px 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  align-items: center;
+  width: 407px;
+  height: 115px;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 167px);
+  background-color: rgba(255, 255, 255, 0.7);
+  grid-template-areas:
+    "icon title"
+    "icon address";
+`;
+
+const JobIconWrapper = styled.div`
+  grid-area: icon;
+  width: 91px;
+  height: 91px;
+  border-radius: 8px;
+  background-color: rgba(66, 103, 178, 1);
+`;
+const JobTitle = styled.div`
+  grid-area: title;
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+
+  & > h3 {
+    font-size: calc(17 / 16 * 1rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-copy-600);
+  }
+
+  & > span {
+    font-size: calc(14 / 16 * 1rem);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-primary-600);
+  }
+`;
+const JobAddress = styled.div`
+  grid-area: address;
+  display: flex;
+  gap: 8px;
+  color: var(--color-primary-400);
+  font-size: calc(12 / 16 * 1rem);
+  font-weight: var(--font-weight-normal);
 `;
 
 export default HeroSection;

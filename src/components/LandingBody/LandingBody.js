@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 import Button from "../Button/Button";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import ReviewsSection from "../ReviewsSection/ReviewsSection";
 
 const LandingBody = () => {
   return (
@@ -82,7 +83,7 @@ const LandingBody = () => {
         <JobCardsWrapper>
           <JobCard>
             <JobIconWrapper>
-              <img alt="" src="/images/facebook.svg"></img>
+              <FacebookContainer></FacebookContainer>
             </JobIconWrapper>
             <JobTitle>Senior UX Designer</JobTitle>
             <JobAddress>
@@ -129,18 +130,7 @@ const LandingBody = () => {
           </Button>
         </ArticleTextWrapper>
       </ThirdArticle>
-      <FourthArticle>
-        <ReviewsHeading>
-          Reviews from <span>people who have found Jobs</span> through Hydrogen
-        </ReviewsHeading>
-        <ReviewsCard>
-          <p>
-            A vulputate pharetra nibh faucibus. Odio ornare cursus nulla egestas
-            augue vel ultricies bibendum ornare. Vulputate sit hac in nunc
-            rhoncus condimentum non sed. Consequat faucibus est integer leo et{" "}
-          </p>
-        </ReviewsCard>
-      </FourthArticle>
+      <ReviewsSection />
     </Wrapper>
   );
 };
@@ -182,11 +172,6 @@ const ThirdArticle = styled(Article)`
   margin-top: 188px;
   align-items: flex-end;
   gap: 277px;
-`;
-
-const FourthArticle = styled(Article)`
-  margin-top: 200px;
-  flex-direction: column;
 `;
 
 const ArticleInputWrapper = styled.div`
@@ -340,6 +325,12 @@ const UsageWrapper = styled.div`
 
 const UploadLogo = styled.img``;
 
+const FacebookContainer = styled.div`
+  height: 49px;
+  border-radius: 8px;
+  background-color: rgba(66, 103, 178, 1);
+`;
+
 const JobCardsWrapper = styled.div`
   --card-wrapper-height: 288px;
   display: flex;
@@ -386,27 +377,6 @@ const JobAddress = styled.div`
   color: var(--color-primary-400);
   font-size: calc(12 / 16 * 1rem);
   font-weight: var(--font-weight-normal);
-`;
-
-const ReviewsHeading = styled(BodyHeading)`
-  margin-bottom: 80px;
-`;
-
-const ReviewsCard = styled.div`
-  width: 730px;
-  height: 326px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  padding: 0 89px;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--color-primary-300);
-
-  & p {
-    font-size: 1rem;
-    color: var(--color-copy-400);
-  }
 `;
 
 export default LandingBody;
