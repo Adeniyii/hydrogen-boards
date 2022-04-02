@@ -98,7 +98,7 @@ const RegisterWrapper = styled.div`
   width: 450px;
   background-color: var(--color-white);
   border-radius: 4px;
-  padding: 40px 36px;
+  padding: 40px 36px 24px;
   display: flex;
   flex-direction: column;
 `;
@@ -107,7 +107,7 @@ const Heading = styled.h1`
   color: var(--color-copy-500);
   font-weight: var(--font-weight-medium);
   font-size: calc(28 / 16 * 1rem);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 `;
 
 const SubHeading = styled.p`
@@ -118,7 +118,7 @@ const SubHeading = styled.p`
 `;
 
 const NewAccountCTAWrapper = styled.div`
-  margin-top: 32px;
+  margin-top: 18px;
   align-self: center;
 `;
 

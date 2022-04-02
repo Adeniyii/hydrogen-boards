@@ -98,10 +98,7 @@ const Form = (props) => {
                 onChange={onAgreeChecked}
                 onClick={onAgreeChecked}
               />
-              <p>
-                I agree to the terms and conditions set forward by
-                HydrogenBoards{" "}
-              </p>
+              <p>I agree to the terms and conditions.</p>
             </AgreeWrapper>
             <FullButton
               variant="fill"
@@ -139,8 +136,8 @@ const AgreeWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 24px;
-  margin-bottom: 44px;
+  margin-top: 18px;
+  margin-bottom: 24px;
 
   & > p {
     font-size: calc(12 / 16 * 1rem);
