@@ -1,13 +1,11 @@
 import React from "react";
-import Header from "../Header";
-import LandingPage from "../LandingPage";
 import styled from "styled-components/macro";
+import AppRoutes from "../../routes/Routes";
 
 const App = () => {
   return (
     <Wrapper>
-      <Header />
-      <LandingPage />
+      <AppRoutes />
     </Wrapper>
   );
 };

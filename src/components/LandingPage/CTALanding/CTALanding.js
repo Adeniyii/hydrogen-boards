@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Button from "../Button/Button";
-import FolkWang from "../../assets/images/folkwang.svg";
-import Almeda from "../../assets/images/almeda.svg";
-import Bt from "../../assets/images/blockT.svg";
-import WinterMute from "../../assets/images/wintermute.svg";
-import Dapperman from "../../assets/images/Dapperman.svg";
+import Button from "../../Button/Button";
+import FolkWang from "../../../assets/images/folkwang.svg";
+import Almeda from "../../../assets/images/almeda.svg";
+import Bt from "../../../assets/images/blockT.svg";
+import WinterMute from "../../../assets/images/wintermute.svg";
+import Dapperman from "../../../assets/images/Dapperman.svg";
 
 const CTALanding = () => {
   return (
@@ -14,7 +14,7 @@ const CTALanding = () => {
         <Heading>
           Get matched the most valuable jobs. All we need is for you to sign up
         </Heading>
-        <Button size="large" variant="fill" type="plain">
+        <Button size="large" variant="fill" color="plain" weight="medium">
           Get Started for free
         </Button>
         <LogoWrapper>

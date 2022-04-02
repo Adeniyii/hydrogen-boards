@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Button from "../Button/Button";
-import MaxWidthWrapper from "../MaxWidthWrapper";
+import Button from "../../Button";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 import ReviewsSection from "../ReviewsSection/ReviewsSection";
 
 const LandingBody = () => {
@@ -19,7 +19,7 @@ const LandingBody = () => {
             <FakeInput />
             <FakeInput>
               <ButtonWrapper>
-                <Button size="large" variant="fill" type="accent">
+                <Button size="large" variant="fill" color="accent">
                   Register
                 </Button>
               </ButtonWrapper>

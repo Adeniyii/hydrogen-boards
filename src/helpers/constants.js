@@ -1,0 +1,1 @@
+export const SUCCESS_CODE: string = "00"

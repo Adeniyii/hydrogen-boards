@@ -32,9 +32,7 @@ const GlobalStyles = createGlobalStyle`
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
-  h1 {
-    line-height: 1.2;
-  }
+
   #root, #__next {
     isolation: isolate;
   }
@@ -78,12 +76,10 @@ const GlobalStyles = createGlobalStyle`
       0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
       10.1px 18.6px 38.9px hsl(var(--shadow-color) / 0.25),
       30.8px 58.3px 122.1px hsl(var(--shadow-color) / 0.5);
-    font-family: var(--font-family-sans-serif);
+    font-family: 'Plus Jakarta Text', var(--font-family-sans-serif);
     font-weight: var(--font-weight-normal);
     scrollbar-width: thin;
-    scrollbar-color:
-      var(--color-copy-300)
-      var(--color-white);
+    scrollbar-color: var(--color-copy-300) var(--color-white);
   }
 
   /*
@@ -105,6 +101,10 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Display', var(--font-family-sans-serif);
+    line-height: 1.2;
   }
 
   ::-webkit-scrollbar {

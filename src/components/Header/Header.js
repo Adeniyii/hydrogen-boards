@@ -1,28 +1,51 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Logo from "../Logo";
 import Button from "../Button";
+import HydrogenLogo from "../../assets/images/Logo.svg";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ slug }) => {
   return (
     <header>
       <MainHeader>
-        <LogoWrapper href="#">
-          <Logo />
+        <LogoWrapper to="/">
+          <img alt="" src={HydrogenLogo} />
         </LogoWrapper>
         <Nav>
-          <Link href="#">Find jobs</Link>
-          <Link href="#">How it works</Link>
-          <Link href="#">Blog</Link>
-          <Link href="#">Career Tips</Link>
+          <CustomLink to="/">Find jobs</CustomLink>
+          <CustomLink to="/">How it works</CustomLink>
+          <CustomLink to="/">Blog</CustomLink>
+          <CustomLink to="/">Career Tips</CustomLink>
         </Nav>
         <ActionRow>
-          <Button size="medium" variant="outline">
-            Login
-          </Button>
-          <Button size="medium" variant="fill">
-            Get Started
-          </Button>
+          {slug === "landing" && (
+            <Link to="/auth/login">
+              <Button size="medium" variant="outline">
+                Login
+              </Button>
+            </Link>
+          )}
+          {slug === "login" && (
+            <Link to="/auth/register">
+              <Button size="medium" variant="outline">
+                Sign Up
+              </Button>
+            </Link>
+          )}
+          {slug === "register" && (
+            <Link to="/auth/login">
+              <Button size="medium" variant="outline">
+                Login
+              </Button>
+            </Link>
+          )}
+          {slug === "landing" && (
+            <Link to="/">
+              <Button size="medium" variant="fill">
+                Get Started
+              </Button>
+            </Link>
+          )}
         </ActionRow>
       </MainHeader>
     </header>
@@ -39,14 +62,15 @@ const MainHeader = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 80px;
   isolation: isolate;
   z-index: 1;
 `;
 
-const LogoWrapper = styled.a`
+const LogoWrapper = styled(Link)`
   align-items: baseline;
   margin-right: 54px;
+  height: 48px;
 `;
 
 const Nav = styled.div`
@@ -64,7 +88,7 @@ const ActionRow = styled.div`
   align-items: center;
 `;
 
-const Link = styled.a`
+const CustomLink = styled(Link)`
   font-size: calc(14 / 16 * 1rem);
 `;
 
