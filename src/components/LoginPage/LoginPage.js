@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import Form from "./SubComponents/Form";
 import styled from "styled-components/macro";
 import { onChange } from "../../helpers/utility";
-import { login } from "../../services/authService";
-import { setAccessToken } from "../../services/apiAdapter";
 
 export default function Login() {
   let [state, setState] = useState({
@@ -22,21 +20,6 @@ export default function Login() {
 
   const onSubmit = async (params: any) => {
     try {
-      let {
-        formLogin: { email, password },
-      } = state;
-      console.log(email, password);
-      // const loginData = new URLSearchParams();
-      // loginData.append("username", email);
-      // loginData.append("password", password);
-      // loginData.append("grant_type", process.env.REACT_APP_GRANTTYPE);
-
-      // let { data } = await login(loginData);
-      // setAccessToken(data.access_token);
-      // localStorage.setItem("loginData", JSON.stringify(data));
-      // localStorage.setItem("empId", data.empId);
-
-      // window.location.href = "/documentstorage";
     } catch (error) {
       toast.error(
         error?.response?.data?.error_description || "An error occured"

@@ -34,7 +34,6 @@ const Form = (props) => {
           handleChange,
           isSubmitting,
           isValid,
-          setFieldError,
           handleSubmit,
         } = props;
         return (
