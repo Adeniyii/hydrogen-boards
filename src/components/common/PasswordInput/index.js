@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React, { useState } from "react";
 import EyeIcon from "./EyeIcon";
 import PasswordIcon from "./PasswordIcon";
